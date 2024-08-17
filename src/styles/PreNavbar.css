@@ -1,33 +1,32 @@
-.preNav{
+/* PreNav Styles */
+.preNav {
     background-color: rgb(29, 28, 28);
-    display:grid;
+    display: grid;
     grid-template-columns: 5fr 2fr;
     color: white;
 }
 
-.preNav > div{
+.preNav > div {
     padding: 0 4vmax;
     display: flex;
     align-items: center;
- }
+}
 
- .preNav > div >span{
+.preNav > div > span {
     color: rgba(180, 180, 180, 0.644);
     font-size: 0.8vmax;
     font-weight: 100;
 }
 
-.preNav > div svg{
+.preNav > div svg {
     fill: rgb(180, 180, 180);
 }
 
-.preNav > div svg:hover{
+.preNav > div svg:hover {
     fill: rgb(255, 255, 255);
 }
 
-
-.preNav > div > a{
-
+.preNav > div > a {
     color: rgb(180, 180, 180);
     font-size: 0.9vmax;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -36,6 +35,56 @@
     text-decoration: none;
 }
 
-.preNav > div > a:hover{
+.preNav > div > a:hover {
     color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .preNav {
+        grid-template-columns: 4fr 2fr; /* Adjust column widths for medium screens */
+    }
+
+    .preNav > div {
+        padding: 0 2vmax; /* Adjust padding for medium screens */
+    }
+
+    .preNav > div > span {
+        font-size: 0.7vmax; /* Slightly smaller font size */
+    }
+
+    .preNav > div > a {
+        font-size: 0.8vmax; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 800px) {
+    .preNav {
+        grid-template-columns: 1fr; /* Stack items vertically on small screens */
+        text-align: center; /* Center text */
+    }
+
+    .preNav > div {
+        padding: 1vmax; /* Adjust padding for small screens */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .preNav > div > span {
+        font-size: 0.6vmax; /* Adjust font size for small screens */
+    }
+
+    .preNav > div > a {
+        font-size: 0.7vmax; /* Adjust font size for small screens */
+        margin: 0.5vmax 0; /* Adjust margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .preNav > div > span {
+        font-size: 0.5vmax; /* Smaller font size for very small screens */
+    }
+
+    .preNav > div > a {
+        font-size: 0.6vmax; /* Smaller font size for very small screens */
+    }
 }

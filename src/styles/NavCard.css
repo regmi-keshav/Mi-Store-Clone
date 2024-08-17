@@ -1,15 +1,36 @@
-.NavCard{
-    width: 10vmax;
+
+
+.NavCard {
+    width: calc(33.333% - 2rem); /* Width for three cards per row, accounting for margin */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    margin: 1rem; /* Space between cards */
     text-align: center;
     cursor: pointer;
 }
-.NavCard > img{
-    width: 10vmax;
+
+/* Ensure images fit within the card */
+.NavCard > img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
 }
-.NavCard > p{
+
+.NavCard > p {
     margin: 0;
 }
 
-.NavCard > span{
+.NavCard > span {
     color: orangered;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .NavCard {
+        width: calc(50% - 2rem); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .NavCard {
+        width: calc(100% - 2rem); /* One card per row on very small screens */
+    }
 }

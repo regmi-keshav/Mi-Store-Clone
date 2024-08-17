@@ -1,21 +1,67 @@
-.heading{
+.heading {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: column; /* Stack items vertically */
+    padding: 2vmax; /* Add padding for spacing */
 }
 
-
-.heading div{
+.heading div {
     background-color: rgba(39, 39, 39, 0.274);
     height: 1px;
-    width: 30vw;
+    width: 50%; /* Adjust to be a percentage of its container */
+    max-width: 300px; /* Limit the maximum width for large screens */
+    margin: 1vmax 0; /* Add vertical margin for spacing */
 }
 
-.heading p{
-    margin: 3vmax;
+.heading p {
+    margin: 2vmax; /* Adjusted margin for better spacing */
     color: rgb(77, 77, 77);
-    font-size: 2.5vmax;
-    font-family:   Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2vmax; /* Adjust font size to be responsive */
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 100;
+    text-align: center; /* Center text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .heading div {
+        width: 60%; /* Wider line on medium screens */
+    }
+
+    .heading p {
+        font-size: 2.2vmax; /* Slightly smaller font size on medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .heading div {
+        width: 70%; /* Wider line on smaller screens */
+    }
+
+    .heading p {
+        font-size: 2vmax; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .heading div {
+        width: 80%; /* Almost full width on very small screens */
+    }
+
+    .heading p {
+        font-size: 1.8vmax; /* Slightly smaller font size */
+        margin: 1.5vmax; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .heading div {
+        width: 90%; /* Full width on extra small screens */
+    }
+
+    .heading p {
+        font-size: 1.6vmax; /* Smaller font size for extra small screens */
+        margin: 1vmax; /* Adjust margin for very small screens */
+    }
 }
